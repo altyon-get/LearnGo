@@ -1,7 +1,6 @@
 package main
 
 import (
-	"errors"
 	"fmt"
 )
 
@@ -12,14 +11,7 @@ func printNumbers(ch chan int) {
 	close(ch) // Close the channel when done
 }
 
-func divide(a, b int) (int, error) {
-	if b == 0 {
-		return 0, errors.New("cannot divide by zero")
-	}
-	return a / b, nil
-}
-
-func Test() {
+func Test2() {
 	ch := make(chan int)
 	go printNumbers(ch)
 

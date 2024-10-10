@@ -41,5 +41,8 @@ func main() {
 	// m["apple"] = 10
 	// m["banana"] = 20
 
-	Test()
+	Test1()
+	// Test2()
+	// Test3()
+
 }
