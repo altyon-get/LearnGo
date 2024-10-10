@@ -1,0 +1,35 @@
+Golang
+
+Workspace -> good practice to code under src
+
+Use got mod init -> to working dir
+
+Package main -> func main() 
+
+Directory and packages are tightly coupled z
+
+Composition (embedding one struct in another) promotes code reuse without the complexity of inheritance. This aligns with Go’s principle of simplicity, making it easier to manage large codebases.
+
+Name string // Public variable (accessible from outside the package) 
+age int // Private variable (accessible only within this package)
+Similarly for functions
+
+fmt.Scan reads only till whitespace
+
+
+A goroutine is a lightweight, concurrent function execution in Go. 
+Unlike traditional threads, goroutines are more memory-efficient, requiring only a small stack (typically 2 KB), which grows as needed. 
+
+A dangling pointer occurs when a pointer still holds the memory address of an object that has been deleted or deallocated. Accessing or dereferencing such a pointer can lead to unpredictable behavior, such as crashes, data corruption, or security vulnerabilities.
+The defer statement is used to ensure that a function call is performed later in a program's execution, usually for clean-up purposes. Deferred functions are executed when the surrounding function returns, making it ideal for closing resources like files, database connections, etc.
+The defer statement in Go is used to schedule a function call to be executed just before the enclosing function returns.
+
+ Go does not have traditional classes like other OOP languages. Instead, Go uses structs and methods. Go also supports interfaces, which allow for polymorphism without inheritance.
+In Go, an interface is a type that specifies a set of methods. A type satisfies an interface implicitly, meaning you don’t need to declare that a type implements an interface, unlike Java or C++.
+
+
+Concurrency is about dealing with multiple tasks at once (like switching between tasks).
+Parallelism is about executing multiple tasks simultaneously (running on multiple CPU cores).
+
+Managed by Runtime:
+In both Go and Python (with greenlets), the underlying system does not manage these threads. Instead, the Go runtime (for goroutines) and the greenlet library (for Python) handle the scheduling and execution of these lightweight threads.
